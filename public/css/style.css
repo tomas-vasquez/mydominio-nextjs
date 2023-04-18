@@ -399,3 +399,7 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+
+table button {
+    min-width: 120px;
+}

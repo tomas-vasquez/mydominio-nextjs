@@ -5,7 +5,7 @@ export default class Footer extends Component {
     return (
       <div
         className="container-fluid bg-primary text-white footer mt-5 pt-5 wow fadeIn"
-        dataWowDelay="0.1s"
+        data-wow-delay="0.1s"
       >
         <div className="container py-5 px-lg-5">
           <div className="row gy-5 gx-4 pt-5">
@@ -14,11 +14,11 @@ export default class Footer extends Component {
                 Subscribe Our Newsletter
               </h5>
               <div className="position-relative" style={{ maxWidth: "400px" }}>
-                <input
+                {/* <input
                   className="form-control bg-white border-0 w-100 py-3 ps-4 pe-5"
                   type="text"
                   placeholder="Enter your email"
-                ></input>
+                ></input> */}
                 <button
                   type="button"
                   className="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2"
@@ -95,7 +95,7 @@ export default class Footer extends Component {
               </div>
             </div>
             <div className="col-md-6 col-lg-4 mt-lg-n5">
-              <div className="bg-light rounded" style={{ padding: "30px" }}>
+              {/* <div className="bg-light rounded" style={{ padding: "30px" }}>
                 <input
                   type="text"
                   className="form-control border-0 py-2 mb-2"
@@ -114,7 +114,7 @@ export default class Footer extends Component {
                 <button className="btn btn-primary w-100 py-2">
                   Send Message
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

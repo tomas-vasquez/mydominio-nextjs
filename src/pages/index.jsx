@@ -1,6 +1,5 @@
-import Head from "next/head";
+import SearchDomain from "../sections/domain/SearchDomain";
 import Hero from "../sections/Hero";
-import SearchDomain from "../sections/SearchDomain";
 
 export default function Home() {
   return (

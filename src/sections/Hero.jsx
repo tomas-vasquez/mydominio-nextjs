@@ -4,7 +4,7 @@ export default class Hero extends Component {
   render() {
     return (
       <div className="container-xxl py-5 bg-primary hero-header mb-5">
-        <div className="container my-5 py-5 px-lg-5">
+        <div className="container mt-5 pt-5 px-lg-5">
           <div className="row g-5">
             <div className="col-lg-6 pt-5 text-center text-lg-start">
               <h1 className="display-4 text-white mb-4 animated slideInLeft"></h1>

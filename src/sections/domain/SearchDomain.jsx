@@ -7,7 +7,7 @@ export default function SearchDomain() {
   const handleClick = (e, name) => {
     e.preventDefault();
     var name = e.target["domainName"].value;
-    router.push("domain?=" + name);
+    router.push("domain?name=" + name);
   };
 
   return (
@@ -17,7 +17,7 @@ export default function SearchDomain() {
           <div className="col-lg-10">
             <div
               className="section-title position-relative text-center mx-auto mb-4 pb-4 wow fadeInUp"
-              dataWowDelay="0.1s"
+              data-wow-delay="0.1s"
               style={{ maxWidth: "600px" }}
             >
               <h1 className="mb-3">Busca tu dominio</h1>
@@ -27,9 +27,9 @@ export default function SearchDomain() {
                 elitr sit clita.
               </p>
             </div>
-            <div
+            {/* <div
               className="position-relative w-100 my-3 wow fadeInUp"
-              dataWowDelay="0.3s"
+              data-wow-delay="0.3s"
             >
               <form onSubmit={handleClick}>
                 <input
@@ -47,8 +47,8 @@ export default function SearchDomain() {
                   className="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2"
                 />
               </form>
-            </div>
-            <div className="row g-3 wow fadeInUp" dataWowDelay="0.5s">
+            </div> */}
+            <div className="row g-3 wow fadeInUp" data-wow-delay="0.5s">
               <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
                 <h5 className="fw-bold text-primary mb-1">.com</h5>
                 <p className="mb-0">$9.99/year</p>

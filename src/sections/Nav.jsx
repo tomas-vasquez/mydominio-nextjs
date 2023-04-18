@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Nav() {
   return (
     <div className="container-xxl position-relative p-0">
@@ -6,7 +8,6 @@ export default function Nav() {
           <h1 className="m-0">
             <i className="fa fa-server me-3"></i>MyDominio
           </h1>
-          {/* <!-- <img src="img/logo.png" alt="Logo"> --> */}
         </a>
         <button
           className="navbar-toggler"
@@ -18,21 +19,21 @@ export default function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto py-0">
-            <a href="index.html" className="nav-item nav-link active">
+            <Link href="/" className="nav-item nav-link active">
               Hosting
-            </a>
-            <a href="about.html" className="nav-item nav-link">
+            </Link>
+            <Link href="domain" className="nav-item nav-link">
               Dominio
-            </a>
-            <a href="domain.html" className="nav-item nav-link">
+            </Link>
+            <Link href="domain.html" className="nav-item nav-link">
               Certificados SSL
-            </a>
-            <a href="hosting.html" className="nav-item nav-link">
+            </Link>
+            <Link href="hosting.html" className="nav-item nav-link">
               Servidores VPS
-            </a>
-            <a href="contact.html" className="nav-item nav-link">
+            </Link>
+            <Link href="contact.html" className="nav-item nav-link">
               Servicios
-            </a>
+            </Link>
             {/* <div className="nav-item dropdown">
               <a
                 href="#"
@@ -53,18 +54,11 @@ export default function Nav() {
                 </a>
               </div>
             </div> */}
-            <a href="contact.html" className="nav-item nav-link">
+            <Link href="contact.html" className="nav-item nav-link">
               Contacto
-            </a>
+            </Link>
           </div>
-          <butaton
-            type="button"
-            className="btn text-secondary ms-3"
-            data-bs-toggle="modal"
-            data-bs-target="#searchModal"
-          >
-            <i className="fa fa-search"></i>
-          </butaton>
+
           <a href="" className="btn btn-secondary py-2 px-4 ms-3">
             Register
           </a>
