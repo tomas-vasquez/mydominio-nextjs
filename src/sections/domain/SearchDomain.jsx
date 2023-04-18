@@ -16,7 +16,7 @@ export default function SearchDomain() {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div
-              className="section-title position-relative text-center mx-auto mb-4 pb-4 wow fadeInUp"
+              className="section-title position-relative text-center mx-auto mb-4 pb-4 animated fadeInUp"
               data-wow-delay="0.1s"
               style={{ maxWidth: "600px" }}
             >
@@ -28,7 +28,7 @@ export default function SearchDomain() {
               </p>
             </div>
             {/* <div
-              className="position-relative w-100 my-3 wow fadeInUp"
+              className="position-relative w-100 my-3 animated fadeInUp"
               data-wow-delay="0.3s"
             >
               <form onSubmit={handleClick}>
@@ -48,7 +48,7 @@ export default function SearchDomain() {
                 />
               </form>
             </div> */}
-            <div className="row g-3 wow fadeInUp" data-wow-delay="0.5s">
+            <div className="row g-3 animated fadeInUp" data-wow-delay="0.5s">
               <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
                 <h5 className="fw-bold text-primary mb-1">.com</h5>
                 <p className="mb-0">$9.99/year</p>

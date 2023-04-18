@@ -18,7 +18,7 @@ export default class SearchingDomain extends Component {
           <div className="row">
             <div className="col-lg-12">
               <div
-                className="section-title position-relative text-center mx-auto mb-4 pb-4 wow fadeInUp"
+                className="section-title position-relative text-center mx-auto mb-4 pb-4 animated fadeInUp"
                 data-wow-delay="0.1s"
                 // style={{ maxWidth: "800px" }}
               >
@@ -82,7 +82,7 @@ export default class SearchingDomain extends Component {
                 )}
               </div>
               <div
-                className="section-title position-relative text-center mx-auto mb-4 pb-4 wow fadeInUp"
+                className="section-title position-relative text-center mx-auto mb-4 pb-4 animated fadeInUp"
                 data-wow-delay="0.1s"
                 // style={{ maxWidth: "800px" }}
               >

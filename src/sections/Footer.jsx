@@ -4,7 +4,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div
-        className="container-fluid bg-primary text-white footer mt-5 pt-5 wow fadeIn"
+        className="container-fluid bg-primary text-white footer mt-5 pt-5animatedfadeIn"
         data-wow-delay="0.1s"
       >
         <div className="container py-5 px-lg-5">
