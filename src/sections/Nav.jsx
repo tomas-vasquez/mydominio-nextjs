@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import FirebaseContext from "../contexts/FirebaseContext";
 import AuthModal from "./auth/AuthModal";
+import ExchangeRateSelector from "./shop/ExchangeRateSelector";
 import ShoppinCar from "./shop/ShoppinCar";
 
 export default function Nav() {
@@ -48,8 +49,9 @@ export default function Nav() {
             </Link>
           </div>
           <div className="d-flex py-2 px-4 ms-3">
-            <ShoppinCar />
-            <AuthModal />
+            <ExchangeRateSelector />
+            <ShoppinCar user={user} />
+            <AuthModal user={user} />
           </div>
         </div>
       </nav>

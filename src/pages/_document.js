@@ -1,5 +1,4 @@
 import React from "react";
-
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -44,9 +43,7 @@ class MyDocument extends Document {
           <link href="css/style.css" rel="stylesheet" />
         </Head>
         <body>
-          <div className="bg-white p-0">
-            <Main />
-          </div>
+          <Main />
           <NextScript />
         </body>
       </Html>

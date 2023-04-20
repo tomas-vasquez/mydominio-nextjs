@@ -5,28 +5,11 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import FirebaseContext from "../../contexts/FirebaseContext";
 import { useRouter } from "next/router";
 
-// Configure FirebaseUI.
-
-function AuthModal(args) {
+function AuthModal(props) {
   const firebase = useContext(FirebaseContext);
 
   const [modal, setModal] = useState(false);
-
   const router = useRouter();
-
-  const uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    ],
-    callbacks: {
-      signInSuccessWithAuthResult: (data) => {
-        toggle();
-        router.reload();
-      },
-    },
-  };
 
   const toggle = () => {
     setModal(!modal);
@@ -37,7 +20,7 @@ function AuthModal(args) {
     router.reload();
   };
 
-  const user = firebase.auth().currentUser;
+  const { user } = props;
 
   return !user ? (
     <>
@@ -45,7 +28,7 @@ function AuthModal(args) {
         <i className="fa fa-sign-in" />
         login
       </Button>
-      <Modal isOpen={modal} toggle={toggle} {...args}>
+      <Modal isOpen={modal} toggle={toggle}>
         <div className="modal-body">
           <div className="domain text-center">
             <h1 className="mt-4 mb-2 text-primary text-shadow">
@@ -57,7 +40,19 @@ function AuthModal(args) {
             </p>
           </div>
           <StyledFirebaseAuth
-            uiConfig={uiConfig}
+            uiConfig={{
+              signInFlow: "popup",
+              signInOptions: [
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+              ],
+              callbacks: {
+                signInSuccessWithAuthResult: (data) => {
+                  toggle();
+                  router.reload();
+                },
+              },
+            }}
             firebaseAuth={firebase.auth()}
           />
         </div>
