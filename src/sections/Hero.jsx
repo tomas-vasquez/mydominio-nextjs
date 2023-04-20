@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AuthModal from "./auth/AuthModal";
 
 export default class Hero extends Component {
   render() {
@@ -33,6 +34,7 @@ export default class Hero extends Component {
               >
                 Get Started Now
               </a>
+              <AuthModal />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
               <img

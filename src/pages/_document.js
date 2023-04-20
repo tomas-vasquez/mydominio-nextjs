@@ -1,7 +1,4 @@
 import React from "react";
-import Footer from "../sections/Footer";
-
-import Nav from "../sections/Nav";
 
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
@@ -48,20 +45,9 @@ class MyDocument extends Document {
         </Head>
         <body>
           <div className="bg-white p-0">
-            <Nav />
             <Main />
-            <Footer />
           </div>
           <NextScript />
-
-          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-          <script src="lib/easing/easing.min.js"></script>
-          <script src="lib/waypoints/waypoints.min.js"></script>
-          <script src="lib/counterup/counterup.min.js"></script>
-          <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-          <script src="js/main.js"></script>
         </body>
       </Html>
     );

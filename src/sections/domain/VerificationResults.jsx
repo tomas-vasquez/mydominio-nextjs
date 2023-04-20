@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { extensions } from "../../helpers/searchDomain";
 import SingleItemTable from "./SingleItemTable";
+
+import { extensions } from "../../helpers/searchDomain";
 
 export default class SearchingDomain extends Component {
   verificationResults = this.props.verificationResults.data;
@@ -11,10 +12,10 @@ export default class SearchingDomain extends Component {
     return (
       <div
         id="search-section"
-        className="container-xxl domain"
+        className="container-xxl"
         style={{ paddingTop: "90px", marginBottom: "90px" }}
       >
-        <div className="container px-lg-6">
+        <div className="domain container px-lg-6">
           <div className="row">
             <div className="col-lg-12">
               <div
@@ -53,7 +54,15 @@ export default class SearchingDomain extends Component {
                             <i className="fas fa-check color-success"></i>{" "}
                             Disponible
                           </td>
-                          <td>{currentDomainExtension.price} BOB</td>
+                          <td>
+                            {
+                              extensions.find(
+                                (extension) =>
+                                  extension.text === currentDomainExtension
+                              ).price
+                            }{" "}
+                            BOB
+                          </td>
                           <td>
                             <button className="btn btn-primary">
                               <i className="fas fa-shopping-cart color-success"></i>{" "}

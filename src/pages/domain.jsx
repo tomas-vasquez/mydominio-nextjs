@@ -9,6 +9,7 @@ import {
 import SearchingDomain from "../sections/domain/SearchingDomain";
 import SearchDomain from "../sections/domain/SearchDomain";
 import VerificationResults from "../sections/domain/VerificationResults";
+import Nav from "../sections/Nav";
 
 export default function Home() {
   const [currentDomainName, setCurrentDomainName] = useState("");
@@ -63,12 +64,13 @@ export default function Home() {
     );
     setTimeout(() => {
       const element = document.getElementById("search-section");
-      element.scrollIntoView({ behavior: "smooth" });
-    }, 500);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    }, 1000);
   };
 
   return (
     <>
+      <Nav />
       <div className="container-xxl pt-5 bg-primary hero-header mb-0">
         <div className="container mt-5 mb-4 py-5 px-lg-4">
           <div className="row g-5 pt-5">

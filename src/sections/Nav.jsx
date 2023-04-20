@@ -1,6 +1,13 @@
 import Link from "next/link";
+import { useContext } from "react";
+import FirebaseContext from "../contexts/FirebaseContext";
+import AuthModal from "./auth/AuthModal";
+import ShoppinCar from "./shop/ShoppinCar";
 
 export default function Nav() {
+  const firebase = useContext(FirebaseContext);
+  const user = firebase.auth().currentUser;
+
   return (
     <div className="container-xxl position-relative p-0">
       <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
@@ -9,6 +16,7 @@ export default function Nav() {
             <i className="fa fa-server me-3"></i>MyDominio
           </h1>
         </a>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -34,34 +42,15 @@ export default function Nav() {
             <Link href="contact.html" className="nav-item nav-link">
               Servicios
             </Link>
-            {/* <div className="nav-item dropdown">
-              <a
-                href="#"
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                Pages
-              </a>
-              <div className="dropdown-menu m-0">
-                <a href="team.html" className="dropdown-item">
-                  Our Team
-                </a>
-                <a href="testimonial.html" className="dropdown-item">
-                  Testimonial
-                </a>
-                <a href="comparison.html" className="dropdown-item">
-                  Comparison
-                </a>
-              </div>
-            </div> */}
+
             <Link href="contact.html" className="nav-item nav-link">
               Contacto
             </Link>
           </div>
-
-          <a href="" className="btn btn-secondary py-2 px-4 ms-3">
-            Register
-          </a>
+          <div className="d-flex py-2 px-4 ms-3">
+            <ShoppinCar />
+            <AuthModal />
+          </div>
         </div>
       </nav>
     </div>
