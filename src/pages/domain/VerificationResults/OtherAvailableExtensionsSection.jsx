@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import SingleItemTable from "../SingleItemTable";
 
-class FailureSection extends Component {
+class OtherAvailableExtensionsSection extends Component {
   render() {
     const { url, extensions } = this.props;
     var currentExtension = url.slice(url.indexOf("."));
@@ -63,4 +63,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(FailureSection);
+export default connect(mapStateToProps)(OtherAvailableExtensionsSection);

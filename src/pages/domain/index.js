@@ -41,7 +41,7 @@ function Home(props) {
     setVerificationResults(null);
 
     //we check availability of the url
-    checkAvailability(url, (results) => {
+    checkAvailability(targetUrl, (results) => {
       setVerificationResults(results);
       const element = document.getElementById("search-section");
       element.scrollIntoView({ behavior: "smooth" });

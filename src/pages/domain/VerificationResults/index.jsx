@@ -1,20 +1,17 @@
 import React, { Component } from "react";
-import SingleItemTable from "../SingleItemTable";
 
 import SuccessSection from "./SuccessSection";
-import FailureSection from "./FailureSection";
+import OtherAvailableExtensionsSection from "./OtherAvailableExtensionsSection";
 
 export default class VerificationResults extends Component {
-  verificationResults = this.props.verificationResults;
-
   render() {
-    const { url } = this.props;
+    const { url, verificationResults } = this.props;
     var tableIndex = 1;
 
     return (
       <div
         id="search-section"
-        className="container-xxl"
+        className=""
         style={{ paddingTop: "90px", marginBottom: "90px" }}
       >
         <div className="domain container px-lg-6">
@@ -25,27 +22,12 @@ export default class VerificationResults extends Component {
                 data-wow-delay="0.1s"
                 // style={{ maxWidth: "800px" }}
               >
-                {this.verificationResults.availableToRegister ? (
-                  <SuccessSection
-                    url={url}
-                    verificationResults={this.verificationResults}
-                  />
-                ) : (
-                  <>
-                    <h1 className="mb-3">
-                      <i className="fas fa-times text-danger"></i> Upps!!!
-                    </h1>
-                    <h2 className="my-3">No puede registrar: {url}</h2>
-
-                    <p className="mb-1">
-                      El nombre de dominio <strong>ya fue registrado</strong>{" "}
-                      con anterioridad, pruebe con otro nombre u otra extension
-                      de dominio.
-                    </p>
-                  </>
-                )}
+                <SuccessSection
+                  url={url}
+                  verificationResults={verificationResults}
+                />
               </div>
-              <FailureSection url={url} />
+              <OtherAvailableExtensionsSection url={url} />
             </div>
           </div>
         </div>

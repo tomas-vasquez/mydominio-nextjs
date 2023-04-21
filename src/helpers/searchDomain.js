@@ -2,7 +2,7 @@ import axios from "axios";
 
 function checkAvailability(domainName, callback) {
   axios
-    .get(`http://localhost:5000/check_domain?name=${domainName}`)
+    .get(`http://localhost:3001/check_domain?name=${domainName}`)
     .then(function (response) {
       callback(response.data);
     })

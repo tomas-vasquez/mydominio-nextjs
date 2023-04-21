@@ -36,13 +36,14 @@ function SingleItemTable(props) {
   }, []);
 
   const onclickHandler = () => {
+    alert("hola");
     addProduct(makeNewPoduct());
   };
 
   const makeNewPoduct = () => {
     return {
       type: "domain",
-      domainName,
+      name: url,
       price: extension.price,
       isUnique: true,
     };
