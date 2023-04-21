@@ -14,6 +14,16 @@ export default (state = mySiteConfig, action) => {
       aux.currentExchangeRate = action.data;
       return aux;
 
+    case "SET_CURRENT_USER":
+      aux = { ...state };
+      aux.user = action.data;
+      return aux;
+
+    case "DELETE_CURRENT_USER":
+      aux = { ...state };
+      aux.user = null;
+      return aux;
+
     default:
       return mySiteConfig;
   }

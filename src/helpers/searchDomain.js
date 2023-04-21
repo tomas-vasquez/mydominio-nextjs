@@ -1,27 +1,14 @@
 import axios from "axios";
 
-const extensions = [
-  { text: ".com", price: 10 },
-  { text: ".bo", price: 10 },
-  { text: ".net", price: 10 },
-  { text: ".com.bo", price: 10 },
-  { text: ".dev", price: 10 },
-];
-
-function checkAvailability(domainName, setConsulting, setVerificationResults) {
-  setConsulting(true);
+function checkAvailability(domainName, callback) {
   axios
-    .get(`http://localhost:4000/check_domain?name=${domainName}`)
+    .get(`http://localhost:5000/check_domain?name=${domainName}`)
     .then(function (response) {
-      setVerificationResults(response);
-      setConsulting(false);
+      callback(response.data);
     })
     .catch(function (error) {
       // handle error
       console.log(error);
-    })
-    .finally(function () {
-      setConsulting(false);
     });
 }
 
@@ -50,4 +37,4 @@ var validateAndPurgeDomainName = (str) => {
   return newStr;
 };
 
-export { extensions, checkAvailability, validateAndPurgeDomainName };
+export { checkAvailability, validateAndPurgeDomainName };

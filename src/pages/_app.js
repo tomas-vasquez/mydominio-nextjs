@@ -12,11 +12,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 //firebase
 import FirebaseContext from "../contexts/FirebaseContext";
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
-import firebaseConfig from "../firebase.config";
-
-firebase.initializeApp(firebaseConfig);
+import myFirebase from "../myFirebase";
 
 //redux
 import { Provider as ReduxProvider } from "react-redux";
@@ -32,16 +28,9 @@ function MyApp({ Component, pageProps }) {
   // Call your hook here
   const handleForceupdateMethod = useForceUpdate();
 
-  useEffect(() => {
-    //repaint the page when firebase has finished loading the user data
-    firebase.auth().onAuthStateChanged(() => {
-      handleForceupdateMethod();
-    });
-  }, []);
-
   return (
     <ReduxProvider store={store}>
-      <FirebaseContext.Provider value={firebase}>
+      <FirebaseContext.Provider value={myFirebase}>
         <Head>
           <title>MyDominio</title>
         </Head>

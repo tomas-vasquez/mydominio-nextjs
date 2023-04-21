@@ -18,8 +18,33 @@ export default {
   ],
 
   extensions: [
-    { id: "domain1", text: ".com", price: { BOB: 70, USD: 10, EUR: 123 } },
-    { id: "domain2", text: ".bo", price: { BOB: 71, USD: 11, EUR: 123 } },
+    {
+      id: "domain1",
+      text: ".com",
+      prices: [
+        { id: "BOB", value: 10 },
+        { id: "USS", value: 11 },
+        { id: "EUR", value: 12 },
+      ],
+    },
+    {
+      id: "domain2",
+      text: ".bo",
+      prices: [
+        { id: "BOB", value: 20 },
+        { id: "USS", value: 21 },
+        { id: "EUR", value: 22 },
+      ],
+    },
+    {
+      id: "domain3",
+      text: ".com.bo",
+      prices: [
+        { id: "BOB", value: 30 },
+        { id: "USS", value: 31 },
+        { id: "EUR", value: 32 },
+      ],
+    },
   ],
 
   HostingTypes: [

@@ -17,7 +17,6 @@ function AuthModal(props) {
 
   const logoutHandler = () => {
     firebase.auth().signOut();
-    router.reload();
   };
 
   const { user } = props;
@@ -49,7 +48,7 @@ function AuthModal(props) {
               callbacks: {
                 signInSuccessWithAuthResult: (data) => {
                   toggle();
-                  router.reload();
+                  // router.reload();
                 },
               },
             }}

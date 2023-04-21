@@ -1,7 +1,7 @@
-import SearchDomain from "../sections/domain/SearchDomain";
 import Hero from "../sections/Hero";
 import Nav from "../sections/Nav";
 import Footer from "../sections/Footer";
+import SearchDomain from "./domain/SearchDomain";
 
 export default function Home() {
   return (

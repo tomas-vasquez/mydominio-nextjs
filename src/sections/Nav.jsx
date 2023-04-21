@@ -1,13 +1,12 @@
+import { connect } from "react-redux";
+
 import Link from "next/link";
-import { useContext } from "react";
-import FirebaseContext from "../contexts/FirebaseContext";
 import AuthModal from "./auth/AuthModal";
 import ExchangeRateSelector from "./shop/ExchangeRateSelector";
 import ShoppinCar from "./shop/ShoppinCar";
 
-export default function Nav() {
-  const firebase = useContext(FirebaseContext);
-  const user = firebase.auth().currentUser;
+function Nav(props) {
+  const { user } = props;
 
   return (
     <div className="container-xxl position-relative p-0">
@@ -58,3 +57,11 @@ export default function Nav() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.settings.user,
+  };
+};
+
+export default connect(mapStateToProps)(Nav);

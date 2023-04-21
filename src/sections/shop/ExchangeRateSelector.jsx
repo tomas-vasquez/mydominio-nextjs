@@ -18,7 +18,7 @@ function ExchangeRateSelector(props) {
       <select
         className="form-select  me-2 "
         name="extension"
-        value={currentExchangeRate.text}
+        value={currentExchangeRate.id}
         onChange={onChangeHandler}
         style={{ minWidth: "85px" }}
       >

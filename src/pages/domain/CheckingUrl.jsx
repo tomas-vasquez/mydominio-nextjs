@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
-export default class SearchingDomain extends Component {
+export default class CheckingUrl extends Component {
   render() {
+    const { url } = this.props;
+
     return (
       <div
         id="search-section"
@@ -20,7 +22,7 @@ export default class SearchingDomain extends Component {
                   <i className="fas fa-spinner fa-spin "></i> Comprobando
                   disponibilidad de:
                 </h1>
-                <h2 className="my-3">"{this.props.domainName}"</h2>
+                <h2 className="my-3">"{url}"</h2>
                 <p className="mb-1">
                   Somos proveedores de dominios web obtenga cualquier extencion
                   de dominio existente.
