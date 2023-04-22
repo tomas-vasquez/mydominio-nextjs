@@ -5,13 +5,17 @@ import firebaseConfig from "./firebase.config";
 
 //store
 import store from "./store";
-import { setCurrentUser } from "./store/setting_store/actions";
+import {
+  setCurrentUser,
+  deleteCurrentUser,
+} from "./store/setting_store/actions";
 
 firebase.initializeApp(firebaseConfig);
 
 firebase.auth().onAuthStateChanged(() => {
   var user = firebase.auth().currentUser;
-  store.dispatch(setCurrentUser(user));
+  if (user) store.dispatch(setCurrentUser({ ...user._delegate }));
+  else store.dispatch(deleteCurrentUser());
 });
 
 export default firebase;

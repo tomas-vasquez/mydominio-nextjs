@@ -1,6 +1,6 @@
 const initial = { products: [] };
 
-export default (state = initial, action) => {
+export default (state, action) => {
   let aux;
 
   switch (action.type) {

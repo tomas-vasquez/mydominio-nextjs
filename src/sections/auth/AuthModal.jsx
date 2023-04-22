@@ -24,8 +24,7 @@ function AuthModal(props) {
   return !user ? (
     <>
       <Button color="success" className="btn " onClick={toggle}>
-        <i className="fa fa-sign-in" />
-        login
+        <i className="fa fa-sign-in-alt" />
       </Button>
       <Modal isOpen={modal} toggle={toggle}>
         <div className="modal-body">
@@ -59,8 +58,7 @@ function AuthModal(props) {
     </>
   ) : (
     <Button color="danger" className="btn " onClick={logoutHandler}>
-      <i className="fa fa-sign-in" />
-      loguot
+      <i className="fa fa-sign-out-alt" />
     </Button>
   );
 }

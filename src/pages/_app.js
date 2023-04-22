@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
+
+import { SnackbarProvider } from "notistack";
 
 //nprogress module
 import "nprogress/nprogress.css";
@@ -25,16 +27,15 @@ function useForceUpdate() {
 }
 
 function MyApp({ Component, pageProps }) {
-  // Call your hook here
-  const handleForceupdateMethod = useForceUpdate();
-
   return (
     <ReduxProvider store={store}>
       <FirebaseContext.Provider value={myFirebase}>
-        <Head>
-          <title>MyDominio</title>
-        </Head>
-        <Component {...pageProps} />
+        <SnackbarProvider>
+          <Head>
+            <title>MyDominio</title>
+          </Head>
+          <Component {...pageProps} />
+        </SnackbarProvider>
       </FirebaseContext.Provider>
     </ReduxProvider>
   );

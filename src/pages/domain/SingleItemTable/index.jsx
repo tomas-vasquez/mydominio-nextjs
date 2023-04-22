@@ -1,5 +1,8 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+
+import { useSnackbar } from "notistack";
+
 import { checkAvailability } from "../../../helpers/searchDomain";
 import { addProduct } from "../../../store/car_store/actions";
 
@@ -12,6 +15,8 @@ function SingleItemTable(props) {
     addProduct,
     currentExchangeRate,
   } = props;
+
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
   const [verificationResults, setverificationResults] = useState(
     externalVerificationResults
@@ -36,8 +41,8 @@ function SingleItemTable(props) {
   }, []);
 
   const onclickHandler = () => {
-    alert("hola");
     addProduct(makeNewPoduct());
+    enqueueSnackbar("I love hooks", { variant: "success" });
   };
 
   const makeNewPoduct = () => {

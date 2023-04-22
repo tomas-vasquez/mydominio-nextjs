@@ -12,6 +12,7 @@
     "next": "latest",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
+    "notistack": "^3.0.1",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
